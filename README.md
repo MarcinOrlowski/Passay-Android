@@ -1,13 +1,17 @@
 What is Passay?
 ===============
-Passay is password policy enforcement for Java. It builds on the success of vt-password and provides a comprehensive and extensible feature set like
-password validation or password generation. Password Validation enforces password policy by validating candidate passwords against a configurable rule set.
-Passay provides a comprehensive set of rules for common cases and supports extension through a simple rule interface.Password generation - creates new passwords using a configurable rule set. The password generator is extensible like all Passay components.
+Passay is password policy enforcement for Java. It builds on the success of [vt-password](https://code.google.com/p/vt-middleware/wiki/vtpassword) and provides a comprehensive and extensible feature set like password validation or password generation. 
 
-Passay website: http://www.passay.org/
-Passay repository: https://github.com/vt-middleware/passay
+ * Password Validation enforces password policy by validating candidate passwords against a configurable rule set. Passay provides a comprehensive set of rules for common cases and supports extension through a simple [rule interface](http://www.passay.org/javadocs/org/passay/Rule.html).
+ 
+ * [Password generator](http://www.passay.org/javadocs/org/passay/PasswordGenerator.html) creates new passwords using a configurable rule set. The password generator is extensible like all Passay components.
 
-Documentation: http://www.passay.org/
+Resources
+=========
+
+ * Passay website: http://www.passay.org/
+ * Passay repository: https://github.com/vt-middleware/passay
+ * Documentation: http://www.passay.org/
 
 What is this Passay for Android for?
 ====================================
@@ -16,14 +20,15 @@ to use original Passay artefacts. However as these are build using Java 1.8 you 
 to add it to your project built with Java 1.7. And this is where `passay-android` package comes handy - it
 simply is Java 1.7 friendly and comes as drop-in replacement reusing original `org.passay` package namepace.
 
-Differences?
-============
+Important notes
+===============
 
-`passay-android` is built from recent `1.2.0` sources. There're however some slight differences:
+`passay-android` is built from recent `1.2.0` sources, however you should be informed that:
 
-* package uses original `org.passay` name
-* `JDBCDictionary` is removed due to missing recent Java components on Android.
-* It depends on Cryptacular 1.1.1 (which is Java 1.7 built of version 1.2.0, so recent one though).
+ * If you use `Java 1.8` in your project, try using [upstream Passay](http://www.passay.org/) **first**
+ * Due to requirements, `minSdk` for this library is `19` which means `KitKat`
+ * This package uses original `org.passay` namespace so it comes as drop-in replacement, but can also cause conflics (if so, raise the issue ticket please!)
+ * `JDBCDictionary` is removed due to missing recent Java components on Android
 
 Usage
 =====
@@ -41,3 +46,4 @@ then you have this already and this step can safely be skipped):
 then edit your module's `build.gradle` and add the following as your dependency:
 
     compile 'com.github.MarcinOrlowski:passay-android:1.2.0'
+
