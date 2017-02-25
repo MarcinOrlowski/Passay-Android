@@ -1,6 +1,6 @@
 What is Passay?
 ===============
-Passay is password policy enforcement for Java. It builds on the success of vt-password and provides a comprehensive and extensible feature set like password validation or password generation. Password Validation enforces password policy by validating candidate passwords against a configurable rule set. Passay provides a comprehensive set of rules for common cases and supports extension through a simple rule interface.Password generation - creates new passwords using a configurable rule set. The password generator is extensible like all Passay components.
+Passay is password policy enforcement for Java. It builds on the success of [vt-password](https://code.google.com/p/vt-middleware/wiki/vtpassword) and provides a comprehensive and extensible feature set like password validation or password generation. Password Validation enforces password policy by validating candidate passwords against a configurable rule set. Passay provides a comprehensive set of rules for common cases and supports extension through a simple [rule interface](http://www.passay.org/javadocs/org/passay/Rule.html). [Password generator](http://www.passay.org/javadocs/org/passay/PasswordGenerator.html) creates new passwords using a configurable rule set. The password generator is extensible like all Passay components.
 
  * Passay website: http://www.passay.org/
  * Passay repository: https://github.com/vt-middleware/passay
