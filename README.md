@@ -1,11 +1,9 @@
 What is Passay?
 ===============
-Passay is password policy enforcement for Java. It builds on the success of vt-password and provides a comprehensive and extensible feature set like
-password validation or password generation. Password Validation enforces password policy by validating candidate passwords against a configurable rule set.
-Passay provides a comprehensive set of rules for common cases and supports extension through a simple rule interface.Password generation - creates new passwords using a configurable rule set. The password generator is extensible like all Passay components.
+Passay is password policy enforcement for Java. It builds on the success of vt-password and provides a comprehensive and extensible feature set like password validation or password generation. Password Validation enforces password policy by validating candidate passwords against a configurable rule set. Passay provides a comprehensive set of rules for common cases and supports extension through a simple rule interface.Password generation - creates new passwords using a configurable rule set. The password generator is extensible like all Passay components.
 
-Passay website: http://www.passay.org/
-Passay repository: https://github.com/vt-middleware/passay
+ * Passay website: http://www.passay.org/
+ * Passay repository: https://github.com/vt-middleware/passay
 
 Documentation: http://www.passay.org/
 
@@ -21,9 +19,9 @@ Differences?
 
 `passay-android` is built from recent `1.2.0` sources. There're however some slight differences:
 
-* package uses original `org.passay` name
+* Due to requirements, `minSdk` is 19 (API Level: 19 is `KitKat`)
+* This package uses original `org.passay` namespace
 * `JDBCDictionary` is removed due to missing recent Java components on Android.
-* It depends on Cryptacular 1.1.1 (which is Java 1.7 built of version 1.2.0, so recent one though).
 
 Usage
 =====
