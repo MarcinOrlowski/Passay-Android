@@ -1,0 +1,48 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+apply plugin: 'com.github.ben-manes.versions'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.0-rc1'
+
+        // See:
+        // https://github.com/ben-manes/gradle-versions-plugin
+        // Usage: gradlew dependencyUpdates task to check dependency versions
+        // also needs apply plugin: 'com.github.ben-manes.versions'
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.14.0'
+
+        // retrolambda
+        classpath 'me.tatarka:gradle-retrolambda:3.5.0'
+
+
+        // bintray
+        //
+        // local.properties
+        //
+        //    bintray.user=...
+        //    bintray.apikey=...
+        //
+        // gradlew bintrayUpload
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.4'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
+
+        // jitpack.io
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+    }
+}
+
+
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

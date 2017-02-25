@@ -1,0 +1,65 @@
+apply plugin: 'com.android.library'
+apply plugin: 'me.tatarka.retrolambda'
+
+// jitpack
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.MarcinOrlowski'
+
+// bintray
+ext {
+    //For bintray and jcenter distribution
+    bintrayRepo = 'maven'
+    bintrayName = 'passay-android'
+
+    publishedGroupId = 'com.marcinorlowski'
+    libraryName = 'passay-android'
+
+    //This artifact name should be the same with library module name
+    artifact = 'passay'
+
+    libraryDescription = 'Android ready build of Passay (passay.org) usable with Java 1.7 based projects'
+
+    siteUrl = 'https://github.com/MarcinOrlowski/passay-android'
+    gitUrl = 'https://github.com/MarcinOrlowski/passay-android.git'
+    issueTrackerUrl = 'https://github.com/MarcinOrlowski/passay-android/issues'
+
+    libraryVersion = '1.2.0'
+
+    developerId = 'MarcinOrlowski'
+    developerName = 'Marcin Orlowski'
+    developerEmail = 'mail@MarcinOrlowski.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 2017022500
+        versionName "1.2.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    // we need v1.1.1 as 1.2.0 is built with Java 8
+    compile 'org.cryptacular:cryptacular:1.1.1'
+}
+
+
+apply from: 'bintray.gradle'
+apply from: 'install.gradle'
