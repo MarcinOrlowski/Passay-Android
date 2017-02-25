@@ -7,7 +7,7 @@ Passay provides a comprehensive set of rules for common cases and supports exten
 Passay website: http://www.passay.org/
 Passay repository: https://github.com/vt-middleware/passay
 
-Documentation:
+Documentation: http://www.passay.org/
 
 What is this Passay for Android for?
 ====================================
