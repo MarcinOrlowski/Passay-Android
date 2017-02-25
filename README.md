@@ -28,15 +28,8 @@ Differences?
 Usage
 =====
 
-This package is available from both jcenter and jitpack.io.
-
-
-jitpack.io
-==========
-
-If you prefer `jitpack`, then edit your master `gradle.build` file and add jitpack repository (if
-you use other jitpack hosted artefacts, then you have this already and this step can safely be
-skipped):
+Edit your master `gradle.build` file and add jitpack repository (if you use other jitpack hosted artefacts,
+then you have this already and this step can safely be skipped):
 
     allprojects {
         repositories {
@@ -48,11 +41,3 @@ skipped):
 then edit your module's `build.gradle` and add the following as your dependency:
 
     compile 'com.github.MarcinOrlowski:passay-android:1.2.0'
-
-
-bintray
-=======
-
-If you prefer `jcenter`, then edit your module `gradle.build` and add:
-
-    compile "com.marcinorlowski:passay:1.2.0"
