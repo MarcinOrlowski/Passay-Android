@@ -20,19 +20,20 @@ to use original Passay artefacts. However as these are build using Java 1.8 you 
 to add it to your project built with Java 1.7. And this is where `passay-android` package comes handy - it
 simply is Java 1.7 friendly and comes as drop-in replacement reusing original `org.passay` package namepace.
 
-Differences?
-============
+Important notes
+===============
 
-`passay-android` is built from recent `1.2.0` sources. There're however some slight differences:
+`passay-android` is built from recent `1.2.0` sources, however you should be informed that:
 
-* Due to requirements, `minSdk` is 19 (API Level: 19 is `KitKat`)
-* This package uses original `org.passay` namespace
-* `JDBCDictionary` is removed due to missing recent Java components on Android.
+ * If you use `Java 1.8` in your project, try using [upstream Passay](http://www.passay.org/) **first**
+ * Due to requirements, `minSdk` for this library is `19` which means `KitKat`
+ * This package uses original `org.passay` namespace so it comes as drop-in replacement, but can also cause conflics (if so, raise the issue ticket please!)
+ * `JDBCDictionary` is removed due to missing recent Java components on Android
 
 Usage
 =====
 
-This package is available from both jcenter and jitpack.io.
+This package is available from both `jcenter` and `jitpack.io` so choose what you prefer.
 
 
 jitpack.io
