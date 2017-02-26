@@ -15,20 +15,7 @@ Resources
 
 What is this Passay for Android for?
 ====================================
-In short - if you are building your Android project using Java 1.8 and Jack, you should first to try
-to use original Passay artefacts. However as these are build using Java 1.8 you will face issues trying
-to add it to your project built with Java 1.7. And this is where `passay-android` package comes handy - it
-simply is Java 1.7 friendly and comes as drop-in replacement reusing original `org.passay` package namepace.
-
-Important notes
-===============
-
-`passay-android` is built from recent `1.2.0` sources, however you should be informed that:
-
- * If you use `Java 1.8` in your project, try using [upstream Passay](http://www.passay.org/) **first**
- * Due to requirements, `minSdk` for this library is `19` which means `KitKat`
- * This package uses original `org.passay` namespace so it comes as drop-in replacement, but can also cause conflics (if so, raise the issue ticket please!)
- * `JDBCDictionary` is removed due to missing recent Java components on Android
+In short original Passay builds are created using Java 1.8 (this also includes dependencies like `Cryptacular`) so if you are building your Android project using Java 1.7 you will face compilation errors trying to add original Passay. And this is where this `passay-android` package comes handy - it is simply Java 1.7 friendly and comes as drop-in replacement using original `org.passay` package namepace.
 
 Usage
 =====
@@ -47,3 +34,13 @@ then edit your module's `build.gradle` and add the following as your dependency:
 
     compile 'com.github.MarcinOrlowski:passay-android:1.2.0'
 
+
+Important notes
+===============
+
+`passay-android` is built from recent `1.2.0` sources, however you should be informed that:
+
+ * If you use `Java 1.8` in your project, try using [upstream Passay](http://www.passay.org/) **first**,
+ * Due to code requirements, `minSdk` for this library is `19` which means `KitKat` or newer,
+ * This package uses original `org.passay` namespace so it comes as drop-in replacement, but can also cause conflics (if so, raise the issue ticket please!),
+ * `JDBCDictionary` is removed due to missing recent Java components on Android.
