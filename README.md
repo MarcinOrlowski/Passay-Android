@@ -1,3 +1,8 @@
+[![Release](https://jitpack.io/v/MarcinOrlowski/passay-android.svg)]
+(https://jitpack.io/#MarcinOrlowski/passay-android)
+
+
+
 What is Passay?
 ===============
 Passay is password policy enforcement for Java. It builds on the success of [vt-password](https://code.google.com/p/vt-middleware/wiki/vtpassword) and provides a comprehensive and extensible feature set like password validation or password generation. 
