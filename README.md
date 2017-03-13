@@ -1,5 +1,6 @@
 [![Release](https://jitpack.io/v/MarcinOrlowski/passay-android.svg)]
 (https://jitpack.io/#MarcinOrlowski/passay-android)
+[![Dependency Status](https://dependencyci.com/github/MarcinOrlowski/Passay-Android/badge)](https://dependencyci.com/github/MarcinOrlowski/Passay-Android)
 
 
 
